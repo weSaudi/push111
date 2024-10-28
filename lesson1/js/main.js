@@ -362,46 +362,50 @@ const handleOutgoingChat = () => {
 }
 
 
+let totalnum = 15;
+let recnum = Math.ceil(((videocheck.length + level)/totalnum) *100);
+console.log(recnum);
 
 const suggestionList = document.querySelector('.suggestion-list');
 btnback.addEventListener('click', () => 
   {
-    let totalnum = 15;
-    let recnum = Math.ceil(((videocheck.length + level)/totalnum) *100);
     clearList(); 
     //addFirstListItem();
     if(recnum >= 0  && recnum < 20)
       {
-        addListItem('قم بدراسة المحتوى', '#');
+        addListItem('قم بدراسة المحتوى', 'https://www.youtube.com/watch?v=01E4C1WMTrE');
         userMessage ="  انت مساعد في تعلم الطالب درس حول مفهوم التصميم التعليمي قم بكتابة عبارة واحدة توجه فيها الطالب نحو دراسة المحتوى تبدء بعبارة عليك دراسة مفهوم التصميم التعليمي";
       }
     if(recnum >= 20  && recnum < 40)
       {
-        addListItem('قم بدراسة المحتوى', '#');
+        addListItem('Second new suggestion', 'https://www.youtube.com/watch?v=01E4C1WMTrE');
+        addListItem('Second new suggestion', 'https://www.youtube.com/watch?v=g0-RRrraRQk');
         userMessage ="  انت مساعد في تعلم الطالب درس حول مفهوم التصميم التعليمي قم بكتابة عبارة واحدة توجه فيها الطالب نحو دراسة المحتوى تبدء بعبارة عليك دراسة مفهوم التصميم التعليمي";
       }
     if(recnum >= 40  && recnum < 60)
       {
-        addListItem('Second new suggestion', '#');
-        addListItem('Second new suggestion', '#');
+        addListItem('Second new suggestion', 'https://www.youtube.com/watch?v=mr9WGICpikU');
+        addListItem('Second new suggestion', 'https://www.youtube.com/watch?v=ItYvYx3zszY');
+        addListItem('Second new suggestion', 'https://www.youtube.com/watch?v=hkwOQ4DAxKI');
+        addListItem('Second new suggestion', 'https://www.youtube.com/watch?v=lWK6vbWReII');
         userMessage ="  انت مساعد في تعلم الطالب درس حول مفهوم التصميم التعليمي قم بكتابة عبارة واحدة توجه فيها الطالب نحو دراسة المحتوى تبدء بعبارة عليك دراسة أهمية التصميم التعليمي";
       }
     if(recnum >= 60  && recnum < 80)
       {
-        addListItem('Second new suggestion', '#');
-        addListItem('Second new suggestion', '#');
+        addListItem('Second new suggestion', 'https://www.youtube.com/watch?v=8wT-krjU1ok');
+        addListItem('Second new suggestion', 'https://www.youtube.com/watch?v=inrfKg4Depw');
+        addListItem('Second new suggestion', 'https://www.youtube.com/watch?v=6poK7RbEHrw');
         userMessage ="  انت مساعد في تعلم الطالب درس حول مفهوم التصميم التعليمي قم بكتابة عبارة واحدة توجه فيها الطالب نحو دراسة المحتوى تبدء بعبارة عليك دراسة مزايا التصميم التعليمي";
       }
     if(recnum >= 80  && recnum < 100)
       {
-        addListItem('Second new suggestion', '#');
-        addListItem('Second new suggestion', '#');
+        addListItem('Second new suggestion', 'https://www.youtube.com/watch?v=XhvOFQo4Ixk');
+        addListItem('Second new suggestion', 'https://www.youtube.com/watch?v=Gg23WerMhqU');
         userMessage ="  انت مساعد في تعلم الطالب درس حول مفهوم التصميم التعليمي قم بكتابة عبارة واحدة توجه فيها الطالب نحو دراسة المحتوى تبدء بعبارة عليك دراسة مكونات التصميم التعليمي";
       }
     if(recnum == 100 )
       {
-        addListItem('Second new suggestion', '#');
-        addListItem('Second new suggestion', '#');
+        addListItem('Second new suggestion', 'https://www.youtube.com/watch?v=-uMCAtGXX4I');
         userMessage ="  انت مساعد في تعلم الطالب درس حول التصميم التعليمي قم بكتابة عبارة واحدة توجه فيها الطالب نحو دراسة المحتوى تبدء بعبارة عليك دراسة الدرس التالي";
       }
       handleOutgoingChat();
@@ -438,5 +442,3 @@ function addFirstListItem() {
   newListItem.appendChild(heading);
   suggestionList.appendChild(newListItem);
 }
-
-
